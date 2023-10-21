@@ -1,0 +1,45 @@
+body{
+    margin: auto;/*center the body*/
+}
+.heading, h2{
+    color:white;
+    font-size: 24px;
+    margin:20px;
+}
+.miniHeading{
+    color:#015351;
+    font-weight: bold;
+}
+.finishbtn{
+    border: none;
+    background-color: #015351;
+    color: white;
+    height: 80px;
+}
+.content{
+    display: grid;
+    grid-template-columns: auto auto;/*arrange the fields in 3 columns*/
+}
+input, .leaveType{
+    border: 1px solid #ffffff;
+    margin: 15px;
+    padding: 15px;
+    background-color: #FC9E01;
+    color: #ffffff;
+    width: 70%;
+}
+label{
+    color: #015351;
+    padding-left: 15px;
+    font-size: 24px;
+}
+.grid-item{
+    margin: 15px;
+}
+.finishbtn{
+    width:200px;
+    padding: 15px;
+    font-size:24px;
+    display: block;
+    margin:5px auto;
+}

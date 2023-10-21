@@ -1,0 +1,71 @@
+body{
+    margin: auto;/*center the body*/
+}
+select{
+    border: 1px solid #ffffff;
+    margin: 15px;
+    padding: 15px;
+}
+table{
+    text-align: center;
+}
+table td{
+    border: 1px solid #ffffff;
+    color: #015351;
+    font-weight: bold;
+    padding: 10px;
+}
+th, .approve, .searchbtn{
+    background-color: #015351;
+    color: #ffffff;
+    padding: 15px;
+}
+.decline{
+    background-color: #FC9E01;
+    color: #ffffff;
+    padding: 15px;
+}
+.more{
+    border: none;
+}
+.decline{
+    border: 2px solid #015351;
+    color: #ffffff;
+}
+.divMore{
+    background-color: #015351;
+    display:grid;
+    grid-template-columns: auto auto auto ;/*arrange the fields in 3 columns*/
+    padding: 20px;
+}
+.entry{
+    margin:15px;
+    background-color: #015351;
+}
+label{
+    color: #ffffff;
+    /* background-color: #015351; */
+}
+input{
+    border: none;
+    border-bottom: 2px solid #FC9E01;
+    background-color: #015351;
+    color:#FC9E01;
+}
+.comment{
+    border: 2px solid #FC9E01;
+    padding: 20px;
+}
+.title{
+    color:#ffffff;
+    font-size: 24px;
+}
+#divMore{
+    display: none;
+}
+.searchbtn{
+    padding:10px;
+}
+h2{
+    color: #015351;
+}

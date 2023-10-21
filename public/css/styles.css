@@ -1,0 +1,241 @@
+body{
+  background-color: rgb(249, 248, 246);
+  opacity: 1;
+  margin: auto;
+}
+.login-background{
+  background-color: rgb(0, 0, 0);
+  background: url('../images/loginimage.png') no-repeat center center fixed;
+  background-size: cover;
+}
+/*
+ #015351 -> green 
+rgba(252, 158, 1, 1) -> other
+*/
+/* navigation styling */
+.nav {
+  height: 70px;
+  width: 100%;
+  background-color: transparent;
+  position: relative;
+  opacity: 1;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.nav-header{
+  display: flex;
+}
+
+.nav > .nav-header > .nav-title {
+  /* display: inline-block; */
+  padding: 10px 10px 10px 50px;
+}
+
+.nav-title{
+  text-decoration: none;
+  color: #015351;
+  width: 80%;
+  height: 51px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 56px;
+  padding-left: 10px;
+}
+
+.nav > .nav-links {
+  display: flex;
+  float: right;
+}
+
+.nav-links{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  float: right;
+  right: 0;
+  padding-right: 30px;
+  padding-top: 5px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+/* remove default checkbox styling */
+input[type=checkbox]{
+  display: none;
+}
+
+.triangle {
+  width: 0; 
+  height: 0; 
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;  
+  border-top: 9px solid #FFFFFF;
+  margin-top: 50px;
+}
+
+.rounded-circle{
+  border-radius: 50%!important;
+}
+
+#navBtn{
+  height: 30px;
+  width: 30px;
+  border: none;
+  background-color: transparent;
+  color: #015351;
+  margin: 4px;
+  font-size: 35px;
+  line-height: 1.4;
+  letter-spacing: -0.2em;
+  font-weight: 600;
+}
+
+.dropdown{
+  cursor: pointer;
+}
+
+.dd-content{
+  display: none;
+}
+
+/* .dd-input:checked~  */
+.dd-content{
+  display:none;
+  background-color: #015351;
+  color: #FFFFFF;
+  position: absolute;
+  width: 40vh;
+  right: 0;
+  height: 90vh;
+  border-radius: 5px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,.35);
+  padding: 10px;
+}
+
+.dd-content > a{
+  text-decoration: none;
+  /* color: white; */
+  display: block; 
+}
+
+a{
+  text-decoration: none;
+}
+
+.user_name{
+  color: rgba(252, 158, 1, 1);
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font-size: 20px;
+  margin-left: 5px;
+}
+
+.logout{
+  background-color: transparent;
+  border: none;
+  color: #ffffffe0;
+  font-family: Roboto;
+  text-transform: capitalize;
+  letter-spacing: 5px;
+  margin: 10%;
+  margin-left: 5%;
+  font-size: 23px;
+  width: auto;
+  height: auto;
+}
+.confirmation{
+  margin: auto;
+  text-align: center;
+}
+.container{
+  display: flex;
+  justify-content: space-evenly;
+}
+.item.item{
+  padding: 30px;
+}
+.item input:focus{
+  border: 3px solid #FC9E01;
+}
+ .item input{
+  border: none;
+  border-bottom: 2px solid #FC9E01;
+  background-color: transparent;
+  margin: 10px;
+  width: 300px;
+  height: 45px;
+  color: #FC9E01;  
+  font-size: 21px;
+  text-transform: uppercase;
+}
+.item select{
+ border: none;
+ border-bottom: 2px solid #FC9E01;
+ background-color: #015351;
+ margin: 10px;
+ width: 300px;
+ height: 45px;
+ color: #FC9E01;  
+ font-size: 24px;
+ text-transform: uppercase;
+}
+.item label{
+  color: #FFFFFF;
+  padding: 10px;
+  font-size: 24px;
+  line-height: 28px;
+}
+.button{
+  border: none;
+  background-color: transparent;
+  color: #000;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.yellowBtn {
+  background-color: #FC9E01;
+  color: #FFFFFF;
+  width: 329px;
+  height: 85px;
+  font-size:20px;
+}
+  /* 
+  transition: background 3s;
+  transition: all .4s ease-out; */
+.login,.forgotpassword{
+  margin: auto;
+  /* text-align: center;   */
+  color: #000000;
+
+}
+input[type=text], [type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #000000;
+}
+.err{
+  text-transform: capitalize;
+  text-align: center;
+  color: red;
+  letter-spacing: 4px;
+  /* font-size: 30px; */
+  margin: 5px 0px 0px;
+}
+
+.err2{
+  text-transform: capitalize;
+  text-align: center;
+  color: red;
+  letter-spacing: 3px;
+  font-size: 20px;
+  margin: 0px 0px;
+}
