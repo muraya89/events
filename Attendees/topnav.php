@@ -16,17 +16,8 @@
 		<div class="nav-title" id="nav-title">
 		</div>
 		<div class="nav-links">
-			<!-- search bar -->
-			<!-- <div class="search">
-					<form action="">
-						<input type="text" placeholder="Search...">
-					<div class="searchbtn">
-						<button type="submit" name="Submit">Submit</button>
-					</div>
-					</form>
-			</div> -->
 			<div>
-				<img class="rounded-circle" src="./public/images/lary-avatar.svg" alt="avatar">
+				<img class="rounded-circle" src="../public/images/lary-avatar.svg" alt="avatar">
 			</div>
 			<div class="dropdown">
 				<input type="checkbox" class="dd-input" id="test" hidden>
@@ -41,11 +32,7 @@
 						<button id="navBtn" onclick="closeNav()">x</button>
 					</div>
 					<hr>					
-					<a href="./events.php" class="user_name logout" style="margin: 10%; margin-left: 5%;"> Events</a>			
-					<a href="./leaveStatus.php" class="user_name logout" style="margin: 10%; margin-left: 5%;">
-						<?= $_SESSION['role'] === 'Lecturer' ? '' : 'leave reviews'; ?>
-						
-					</a>			
+					<a href="./events.php" class="user_name logout" style="margin: 10%; margin-left: 5%;"> Events</a>	
 					<a href="./profile.php" class="user_name logout" style="margin: 10%; margin-left: 5%;"> profile</a>			
 					<form method="post" action="./auth/Logout.php">
 						<button type="submit" name="logout" class="logout">Logout</button>
