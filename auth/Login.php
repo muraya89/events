@@ -29,7 +29,7 @@ class Login {
                     $_SESSION['id'] = $associativeArray['id'];
                     $_SESSION['name'] = $associativeArray['name'];
                     $_SESSION['role'] = $associativeArray['role'];
-                    $associativeArray['role'] === '0'? header('Location: ../Attendees/leaveApphis.php') : header('Location: ../Organizers/leaveStatus.php');
+                    $associativeArray['role'] === '0'? header('Location: ../Attendees/events.php') : header('Location: ../Organizers/events.php');
                 }
             }
         }else {
