@@ -35,7 +35,7 @@
     
     document.getElementsByTagName.innerHTML = window.confirmationStyle();
     function confirmationStyle () {
-        document.getElementById("nav-title").textContent = "Events";
+        document.getElementById("nav-title").textContent = "Events Management";
 
     };
     function closeNav () {
