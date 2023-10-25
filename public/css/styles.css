@@ -16,10 +16,10 @@ rgba(252, 158, 1, 1) -> other
 .nav {
   height: 70px;
   width: 100%;
-  background-color: transparent;
+  background-color: black;
+  color: white;
   position: relative;
   opacity: 1;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .nav-header{
@@ -33,7 +33,6 @@ rgba(252, 158, 1, 1) -> other
 
 .nav-title{
   text-decoration: none;
-  color: #015351;
   width: 80%;
   height: 51px;
   font-family: Roboto;
@@ -87,7 +86,7 @@ input[type=checkbox]{
   width: 30px;
   border: none;
   background-color: transparent;
-  color: #015351;
+  color: rgb(141, 0, 0);
   margin: 4px;
   font-size: 35px;
   line-height: 1.4;
@@ -106,12 +105,12 @@ input[type=checkbox]{
 /* .dd-input:checked~  */
 .dd-content{
   display:none;
-  background-color: #015351;
+  background-color: #000000;
   color: #FFFFFF;
   position: absolute;
   width: 40vh;
   right: 0;
-  height: 90vh;
+  height: 100vh;
   border-radius: 5px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,.35);
   padding: 10px;
@@ -128,9 +127,9 @@ a{
 }
 
 .user_name{
-  color: rgba(252, 158, 1, 1);
+  color: #ffffff;
   text-transform: uppercase;
-  letter-spacing: 10px;
+  /* letter-spacing: 10px; */
   font-size: 20px;
   margin-left: 5px;
 }
@@ -160,27 +159,27 @@ a{
   padding: 30px;
 }
 .item input:focus{
-  border: 3px solid #FC9E01;
+  border: 3px solid white;
 }
  .item input{
   border: none;
-  border-bottom: 2px solid #FC9E01;
+  border-bottom: 2px solid white;
   background-color: transparent;
   margin: 10px;
   width: 300px;
   height: 45px;
-  color: #FC9E01;  
+  color: white;  
   font-size: 21px;
   text-transform: uppercase;
 }
 .item select{
  border: none;
- border-bottom: 2px solid #FC9E01;
- background-color: #015351;
+ border-bottom: 2px solid #bc9087;
+ background-color: #000000;
  margin: 10px;
  width: 300px;
  height: 45px;
- color: #FC9E01;  
+ color: #bc9087;  
  font-size: 24px;
  text-transform: uppercase;
 }
@@ -199,7 +198,7 @@ a{
   cursor: pointer;
 }
 .yellowBtn {
-  background-color: #FC9E01;
+  background-color: #bc9087;
   color: #FFFFFF;
   width: 329px;
   height: 85px;

@@ -72,7 +72,7 @@ input{
 
 
 
-body {
+  body {
     --background-color: #18181B;
     --text-color: #A1A1AA;
   
@@ -150,8 +150,9 @@ body {
     display: grid;
     grid-template-columns: auto auto auto auto;
     grid-gap: 32px;
-    position: relative;
+    /* position: relative; */
     z-index: 1;
+    padding: 90px;
   }
   
   .card {
@@ -162,6 +163,7 @@ body {
     cursor: pointer;
     position: relative;
     transition: box-shadow .25s;
+    max-width: 500px;
   
     &::before {
       content: '';
@@ -582,36 +584,5 @@ body {
     &:before,
     &:after {
       box-sizing: inherit;
-    }
-  }
-  
-  // Center
-  body {
-    min-height: 100vh;
-    display: flex;
-    font-family: 'Inter', Arial;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--background-color);
-    overflow: hidden;
-  
-    &:before {
-      content: '';
-      position: absolute;
-      inset: 0 -60% 65% -60%;
-      background-image: radial-gradient(ellipse at top, #10B981 0%, var(--background-color) 50%);
-      opacity: var(--blur-opacity);
-    }
-  
-    .twitter {
-      position: fixed;
-      display: block;
-      right: 12px;
-      bottom: 12px;
-      svg {
-        width: 32px;
-        height: 32px;
-        fill: #fff;
-      }
     }
   }

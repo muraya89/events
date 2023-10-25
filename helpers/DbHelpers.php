@@ -95,6 +95,19 @@ class DbHelpers {
   public function getAll ($table) {
     $result = mysqli_query($this->db, "SELECT * FROM " . $table);
     if ($result) {
+      $data = [];
+      while ($row = mysqli_fetch_assoc($result)) {
+          $data[] = $row;
+      }
+      return $data;
+  } else {
+      return 'table not found';
+    }
+  }
+
+  public function countData ($table) {
+    $result = mysqli_query($this->db, "SELECT COUNT(*) as count FROM $table");
+    if ($result) {
       return $result;
     } else {
       return 'table not found';

@@ -40,9 +40,8 @@
 						<h2 class="user_name" id="user_name"><?= isset($_SESSION['name']) ? $_SESSION['name'] : 'not logged in'?></h2>
 						<button id="navBtn" onclick="closeNav()">x</button>
 					</div>
-					<hr>			
-					<a href="./leaveApplication.php" class="user_name logout" style="margin: 10%; margin-left: 5%;"> leave application</a>			
-					<a href="./leaveApphis.php" class="user_name logout" style="margin: 10%; margin-left: 5%;"> Leave History</a>			
+					<hr>					
+					<a href="./events.php" class="user_name logout" style="margin: 10%; margin-left: 5%;"> Events</a>			
 					<a href="./leaveStatus.php" class="user_name logout" style="margin: 10%; margin-left: 5%;">
 						<?= $_SESSION['role'] === 'Lecturer' ? '' : 'leave reviews'; ?>
 						
