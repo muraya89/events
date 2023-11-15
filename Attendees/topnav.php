@@ -42,3 +42,24 @@
 		</div>
 	</div>			
 </div>
+
+<script>
+	
+    document.getElementsByTagName.innerHTML = window.confirmationStyle();
+    function confirmationStyle () {
+        document.getElementById("nav-title").textContent = "Events Management";
+
+    };
+    function closeNav () {
+        document.querySelector(".dd-content").style.display = "none";
+    };
+
+    function openNav () {
+        document.querySelector("#dd-content").style.display = "block";
+    };
+    
+    const myFun = (element) => {
+      element.getElementsByClassName('expanded-row-content')[0].classList.toggle('hide-row');
+    }
+    
+</script>

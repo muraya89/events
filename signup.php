@@ -107,7 +107,7 @@
                     <label for="nationalid">National ID</label><br>
                     <input type="text" name="natid" id="natid"><br><br>
                     <label for="phone">Phone</label><br>
-                    <input type="text" id="phone" name="phone">
+                    <input type="text" id="phone" name="phone"><br/><br/>
                     <label for="">Confirm password</label><br>
                     <input type="password" name="confpass" id="confpass">
                     <input type="hidden" name="table" value="universityleavems" />

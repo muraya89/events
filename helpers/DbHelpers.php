@@ -100,7 +100,7 @@ class DbHelpers {
           $data[] = $row;
       }
       return $data;
-  } else {
+    } else {
       return 'table not found';
     }
   }
@@ -116,7 +116,7 @@ class DbHelpers {
   
   // method to fetch specific data from a table
   public function getSpecifics ($table, $id) {
-    $result = mysqli_query($this->db, "SELECT * FROM $table WHERE empID = '$id'");
+    $result = mysqli_query($this->db, "SELECT * FROM $table WHERE id = '$id'");
     if ($result) {
       return $result;
     } else {

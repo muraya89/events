@@ -8,6 +8,11 @@
     $events = $db_helpers->getAll('events');
     $eventCount = mysqli_fetch_assoc($db_helpers->countData('events'));
 ?>
+<style>
+    .nav{
+        position: fixed !important;
+    }
+</style>
 
 <head>
     <link rel="stylesheet" type="text/css" href="../public/css/events.css">
@@ -32,24 +37,6 @@
 
 
 <script>
-    
-    document.getElementsByTagName.innerHTML = window.confirmationStyle();
-    function confirmationStyle () {
-        document.getElementById("nav-title").textContent = "Events Management";
-
-    };
-    function closeNav () {
-        document.querySelector(".dd-content").style.display = "none";
-    };
-
-    function openNav () {
-        document.querySelector("#dd-content").style.display = "block";
-    };
-    
-    const myFun = (element) => {
-      element.getElementsByClassName('expanded-row-content')[0].classList.toggle('hide-row');
-    }
-    
     const eventCardsContainer = document.getElementById("event-card-container");    
 
         // Define the number of event cards you want to create
@@ -64,7 +51,7 @@
         cards.forEach((element) => {
             const card = document.createElement("a");
             card.className = "card";
-            card.href = `http://localhost:81/Events_Management/Attendees/event.php?event=${element.id}`;
+            card.href = `http://localhost:81/events/Attendees/event.php?event=${element.id}`;
             const eventMessage = card.href;
             
            
