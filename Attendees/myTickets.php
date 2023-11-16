@@ -16,66 +16,68 @@
 </head>
 
 <div>
-    <button onclick="goBack()" class="goBack" style="margin-left:15px; float: left; margin-right: 20px;">
+    <button onclick="goBack()" class="goBack" style="margin-left:43px; float: left; margin-right: 20px;">
         <i class="fa fa-arrow-left" aria-hidden="true" style="margin-right: 15px;"></i>
         Go back
     </button>
     <h1>My Tickets</h1>
 </div>
-<div class="supplierTable" style="overflow-x: hidden;">
-    <table>
+<table>
+    <thead>
         <tr>
-            <th>#</th>
-            <th>Event Name</th>
-            <th>Tickets Purchased</th>
-            <th>Location</th>
-            <th>Date</th>
-            <th>Start time</th>
-            <th>End time</th>
-            <th>Pricing</th>
-            <th>Total amount (kes)</th>
-            <th>Actions</th>
+            <td>#</td>
+            <td>Event Name</td>
+            <td>Tickets Purchased</td>
+            <td>Location</td>
+            <td>Date</td>
+            <td>Start time</td>
+            <td>End time</td>
+            <td>Pricing</td>
+            <td>Total amount (kes)</td>
+            <td>Actions</td>
         </tr>
-
-        <?php 
-            // create a while loop to fetch all the array values and display in a table
-            while($myBookings = mysqli_fetch_assoc($bookings)) :
-        ?>
-
-        <tr>
-            <td><?= $myBookings['id']; ?></td>
-            <td><?= $myBookings['name']; ?></td>
-            <td><?= $myBookings['tickets_purchased']; ?></td>
-            <td><?= $myBookings['location']; ?></td>
-            <td><?= $myBookings['date']; ?></td>
-            <td><?= $myBookings['start_time']; ?></td>
-            <td><?= $myBookings['end_time']; ?></td>
-            <td><?= $myBookings['pricing']; ?></td>
-            <td><?= number_format($myBookings['total_amount']); ?></td>
-            <td>
-                <div class="td1">
-                    <form action="AdminClass.php" method="post" class=action1>
-                        <!-- ensure that the product being deleted is the one with the id being selected -->
-                        <input type="hidden" name="id" value="<?= $myBookings['bookings_id'] ?>"/>
-                        <!-- and from the bookingss table -->
-                        <input type="hidden" name="table" value="bookingss" />
-                        <!-- after deleting the redirect should go to the page and refreshed -->
-                        <input type="hidden" name="redirect_to" value="bookingss_report.php" />
-                        <button type="submit" name="deleteSubmit" class="btn">Delete</button>
+    </thead>
+    <?php 
+        // create a while loop to fetch all the array values and display in a table
+        $rowNumber = 1;
+        while($myBookings = mysqli_fetch_assoc($bookings)) :
+    ?>
+    <tr>
+        <td><?= $rowNumber++; ?></td>
+        <td><?= $myBookings['name']; ?></td>
+        <td><?= $myBookings['tickets_purchased']; ?></td>
+        <td><?= $myBookings['location']; ?></td>
+        <td><?= $myBookings['date']; ?></td>
+        <td><?= $myBookings['start_time']; ?></td>
+        <td><?= $myBookings['end_time']; ?></td>
+        <td><?= $myBookings['pricing']; ?></td>
+        <td><?= number_format($myBookings['total_amount']); ?></td>
+        <td>
+            <div class="dropdown">
+                    <div class="verticalDots"></div>
+                <div class="td1 dropdown-content">
+                    <form action="booking.php" method="post" class="action1">
+                        <!-- ensure that the product being edited is the one with the id being selected -->
+                        <input type="hidden" name="id" value="<?= $myBookings['id'] ?>"/>
+                        <!-- and from the bookings table -->
+                        <input type="hidden" name="table" value="bookings" />
+                        <!-- after editing the redirect should go to the specific page and refreshed -->
+                        <input type="hidden" name="redirect_to" value="myTickets.php" />
+                        <button type="submit" name="deleteSubmit" class="actions">Delete</button>
                     </form>
                     <form action="../app/supplier/Products.php" method="post" class="action2">
                         <!-- ensure that the product being edited is the one with the id being selected -->
-                        <input type="hidden" name="id" value="<?= $myBookings['bookings_id'] ?>"/>
-                        <!-- and from the categories table -->
-                        <input type="hidden" name="table" value="categories" />
+                        <input type="hidden" name="id" value="<?= $myBookings['id'] ?>"/>
+                        <!-- and from the bookings table -->
+                        <input type="hidden" name="table" value="bookings" />
                         <!-- after editing the redirect should go to the specific page and refreshed -->
-                        <input type="hidden" name="redirect_to" value="bookingss_report.php" />
-                        <button type="submit" name="supply_submit" class="edit_btn">Edit</button>
+                        <input type="hidden" name="redirect_to" value="myTickets.php" />
+                        <button type="submit" name="editSubmit" class="actions">Edit</button>
                     </form>
                 </div>
-            </td>
-        </tr>
-
-        <?php endwhile; ?>
-    </table>
-</div>
+            </div>
+            
+        </td>
+    </tr>
+    <?php endwhile; ?>
+</table>
