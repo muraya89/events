@@ -19,7 +19,7 @@
 		</div>
 		<div class="nav-links">
 			<a href="./events.php" class="" style="margin-left: 0%; width: 100px; text-align:center; color: white; font-size: 18px;"> Events</a>	
-			<a href="./myTickets.php" class="" style="margin-left: 0%; width: 100px; text-align:center; color: white; font-size: 18px;"> My Tickets</a>	
+			<a href="./myTickets.php" class="" style="margin-left: 0%; width: 100px; text-align:center; color: white; font-size: 18px;"> Tickets</a>	
 			<a href="./profile.php" class="" style="margin-left: 0%; width: 100px; text-align:center; color: white; font-size: 18px;"> Profile</a>		
 			<form method="post" action="./auth/Logout.php">
 				<button type="submit" name="logout" class="" style="margin-right: 20px; cursor: pointer; background-color: black; border:none; color: white; font-size: 18px;">Logout</button>
