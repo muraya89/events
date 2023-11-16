@@ -25,11 +25,13 @@ class Book {
                 header("Location: ../Attendees/event.php?event=".$postData['event_id']."&error=validAmount&name=".$postData['name']."&email=".$postData['email']);
                 exit();
             }else{
-                $saveUser = $this->db_instance->insertData(/** table name */'bookings', [
+                $saveUser = $this->db_instance->postData(/** table name */'bookings', [
                     'name' => $postData['name'],
                     'email' => $postData['email'],
                     'tickets_purchased' => $postData['tickets_purchased'],
-                ], $postData['event_id'], $postData['user_id']);
+                    'event_id' => $postData['event_id'],
+                    'user_id' => $postData['user_id']
+                ]);
                 if (!$saveUser->response) {
                     header("Location: ".$postData['redirect_to']);
                     exit();
