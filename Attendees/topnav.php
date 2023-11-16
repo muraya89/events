@@ -26,28 +26,7 @@
 			</form>
 			<div>
 				<img class="rounded-circle" src="../public/images/lary-avatar.svg" alt="avatar">
-			</div>	
-			<!-- <div class="dropdown">
-				<input type="checkbox" class="dd-input" id="test" hidden>
-				<label class="dropdown" for="test">
-					<button onclick="openNav()" class="button">
-						<div class="triangle"></div>
-					</button>
-				</label>
-				<div class="dd-content" id="dd-content">
-					<div class="container">
-						<h2 class="user_name" id="user_name"><?= isset($_SESSION['name']) ? $_SESSION['name'] : 'not logged in'?></h2>
-						<button id="navBtn" onclick="closeNav()">x</button>
-					</div>
-					<hr>					
-					<a href="./events.php" class="user_name logout" style="margin: 10%; margin-left: 5%;"> Events</a>	
-					<a href="./myTickets.php" class="user_name logout" style="margin: 10%; margin-left: 5%;"> My Tickets</a>	
-					<a href="./profile.php" class="user_name logout" style="margin: 10%; margin-left: 5%;"> profile</a>			
-					<form method="post" action="./auth/Logout.php">
-						<button type="submit" name="logout" class="logout">Logout</button>
-					</form>
-				</div>
-			</div> -->
+			</div>
 		</div>
 	</div>			
 </div>
