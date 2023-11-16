@@ -18,10 +18,16 @@
 		<div class="nav-title" id="nav-title">
 		</div>
 		<div class="nav-links">
+			<a href="./events.php" class="" style="margin-left: 0%; width: 100px; text-align:center; color: white; font-size: 18px;"> Events</a>	
+			<a href="./myTickets.php" class="" style="margin-left: 0%; width: 100px; text-align:center; color: white; font-size: 18px;"> My Tickets</a>	
+			<a href="./profile.php" class="" style="margin-left: 0%; width: 100px; text-align:center; color: white; font-size: 18px;"> Profile</a>		
+			<form method="post" action="./auth/Logout.php">
+				<button type="submit" name="logout" class="" style="margin-right: 20px; cursor: pointer; background-color: black; border:none; color: white; font-size: 18px;">Logout</button>
+			</form>
 			<div>
 				<img class="rounded-circle" src="../public/images/lary-avatar.svg" alt="avatar">
-			</div>
-			<div class="dropdown">
+			</div>	
+			<!-- <div class="dropdown">
 				<input type="checkbox" class="dd-input" id="test" hidden>
 				<label class="dropdown" for="test">
 					<button onclick="openNav()" class="button">
@@ -41,7 +47,7 @@
 						<button type="submit" name="logout" class="logout">Logout</button>
 					</form>
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</div>			
 </div>
