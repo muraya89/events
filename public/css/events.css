@@ -14,8 +14,6 @@ table td{
     color: #015351;
     font-weight: bold;
     padding: 10px;
-   
-    
 }
 .theader{
     padding: 10px;
@@ -39,15 +37,6 @@ table td{
 }
 .entry > input {
     color: #c1ab80;
-}
-label{
-    color: #ffffff;
-    /* background-color: #015351; */
-}
-input{
-    border: none;
-    border-bottom: 2px solid #FC9E01;
-    background-color: #015351;
 }
 .comment{
     border: 2px solid #FC9E01;
@@ -754,3 +743,14 @@ font-family: 'EB Garamond', serif;
 
 .product-image:hover img {transition: all 0.3s ease-out;}
 .product-image:hover img {transform: scale(1.2, 1.2);}
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}

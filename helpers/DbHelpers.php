@@ -67,7 +67,31 @@ class DbHelpers {
       ];
     }
   }
-    
+
+  // method to add data to the db
+  public function insertData ($table, $data, $event, $user) {
+    // with the passed in data (implode) separate the data with a comma
+    $fields = implode(", ", array_keys($data));
+    $values  = "'".implode("', '", array_values($data))."'";
+    // sql query to insert the data into the passed in variable table
+    var_dump($data);
+    var_dump("INSERT INTO `".$table."` (event_id, user_id, other_columns) VALUES ($event, $user, $data)");
+    exit();
+    $result = mysqli_query($this->db, "INSERT INTO `".$table."` (event_id, user_id, other_columns) VALUES ($event, $user, $data)");
+    // mysqli_close($this->db);
+    if (!$result) {
+      return (object)[
+        "response" => $result,
+        "message" => 'error message'
+      ];
+    } else {
+      return (object)[
+        "response" => $result,
+        "message" => "success"
+      ];
+    }
+  }
+
   // method to update data in the db
   public function updateData ($table, $data) {
     $values = '';

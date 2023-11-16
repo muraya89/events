@@ -55,69 +55,70 @@
         </div>
         <div style="flex-grow: 9; margin: auto;">
             <form action="./auth/Register.php" name="registration" onsubmit="return validateRegistration(); " method="post" style="font-size:20px">
-            <!-- create an error message if the user made an error trying to create an account -->
-            <?php
-                if(isset($_GET['error'])) {
-                if($_GET['error']=="emptyfields"){
-                    echo '<p class = "err">Fill in all fields!</p>';
-                }
-                elseif($_GET['error']== "invalidemail") {
-                    echo '<p class = "err">Provide a valid email!</p>';  
-                }
-                elseif ($_GET['error'] == "invalidpassword") {
-                    // code...
-                    echo '<p class = "err">Enter password!</p>';
-                }
-                elseif ($_GET['error'] == "invalidPassword") {
-                    // code...
-                    echo '<p class = "err"> Password should be atleast 8 characters long and should include at least one number, one uppercase letter and one special character </p>';
-                }
-                elseif($_GET['error']== "passwordCheck") {
-                    echo '<p class = "err">Your passwords do not match!</p>';
-                }
-                }
-            ?>
-            <h1 style="text-align: center; margin-bottom: 130px">Sign Up</h1>
-            <div class="row" style="column-gap: 30px; ">
-                <div class="col">
-                    <label for="othername">Name</label><br>
-                    <input type="text" name="name" id="name"><br><br>
-                    <label for="email">Email</label><br>
-                    <input type="text" name="email" id="email"><br><br>
-                    <label for="address">Address</label><br>
-                    <input type="text" name="address" id="address"><br><br>
-                    <label for="">Role</label><br>
-                    <select name="role" id="role">
-                        <option value="">Select role</option>
-                        <option value="Organizers">Event Organizer</option>
-                        <option value="Attendees">Attendee</option>
-                    </select><br><br>
-                    <label for="">New password</label><br>
-                    <input type="password" name="newpass" id="newpass"><br><br>
+                <!-- create an error message if the user made an error trying to create an account -->
+                <?php
+                    if(isset($_GET['error'])) {
+                    if($_GET['error']=="emptyfields"){
+                        echo '<p class = "err">Fill in all fields!</p>';
+                    }
+                    elseif($_GET['error']== "invalidemail") {
+                        echo '<p class = "err">Provide a valid email!</p>';  
+                    }
+                    elseif ($_GET['error'] == "invalidpassword") {
+                        // code...
+                        echo '<p class = "err">Enter password!</p>';
+                    }
+                    elseif ($_GET['error'] == "invalidPassword") {
+                        // code...
+                        echo '<p class = "err"> Password should be atleast 8 characters long and should include at least one number, one uppercase letter and one special character </p>';
+                    }
+                    elseif($_GET['error']== "passwordCheck") {
+                        echo '<p class = "err">Your passwords do not match!</p>';
+                    }
+                    }
+                ?>
+                <h1 style="text-align: center; margin-bottom: 130px">Sign Up</h1>
+                <div class="row" style="column-gap: 30px; ">
+                    <div class="col">
+                        <label for="othername">Name</label><br>
+                        <input type="text" name="name" id="name"><br><br>
+                        <label for="email">Email</label><br>
+                        <input type="text" name="email" id="email"><br><br>
+                        <label for="address">Address</label><br>
+                        <input type="text" name="address" id="address"><br><br>
+                        <label for="">Role</label><br>
+                        <select name="role" id="role">
+                            <option value="">Select role</option>
+                            <option value="Organizers">Event Organizer</option>
+                            <option value="Attendees">Attendee</option>
+                        </select><br><br>
+                        <label for="">New password</label><br>
+                        <input type="password" name="newpass" id="newpass"><br><br>
+                    </div>
+                    <div class="col" style="">
+                        <label for="Gender">Gender</label><br>
+                        <select name="gender" id="gender">
+                            <option value="">Select Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select><br><br>
+                        <label for="dob">Date of Birth</label><br>
+                        <input type="text" name="dob" id=dob  placeholder="yyyy-mm-dd" onmouseout="valDate();"><br><br>
+                        <label for="nationalid">National ID</label><br>
+                        <input type="text" name="natid" id="natid"><br><br>
+                        <label for="phone">Phone</label><br>
+                        <input type="text" id="phone" name="phone"><br/><br/>
+                        <label for="">Confirm password</label><br>
+                        <input type="password" name="confpass" id="confpass">
+                        <input type="hidden" name="table" value="universityleavems" />
+                        <input type="hidden" name="redirect_to" value="../index.php" />
+                    </div>
+                </div> 
+                <div class="col2">
+                    <button type="submit" class="btnCreate" name="signup_submit">SIGN UP</button><br>
+                    <p >Already have an account?<a href="index.php" style="text-decoration: none;">&nbsp;Sign in</a></p>
                 </div>
-                <div class="col" style="">
-                    <label for="Gender">Gender</label><br>
-                    <select name="gender" id="gender">
-                        <option value="">Select Gender</option>
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                    </select><br><br>
-                    <label for="dob">Date of Birth</label><br>
-                    <input type="text" name="dob" id=dob  placeholder="yyyy-mm-dd" onmouseout="valDate();"><br><br>
-                    <label for="nationalid">National ID</label><br>
-                    <input type="text" name="natid" id="natid"><br><br>
-                    <label for="phone">Phone</label><br>
-                    <input type="text" id="phone" name="phone"><br/><br/>
-                    <label for="">Confirm password</label><br>
-                    <input type="password" name="confpass" id="confpass">
-                    <input type="hidden" name="table" value="universityleavems" />
-                    <input type="hidden" name="redirect_to" value="../index.php" />
-                </div>
-            </div> 
-            <div class="col2">
-                <button type="submit" class="btnCreate" name="signup_submit">SIGN UP</button><br>
-                <p >Already have an account?<a href="index.php" style="text-decoration: none;">&nbsp;Sign in</a></p>
-            </div>
+            </form>
         </div>
     </div>
     <script>
@@ -298,8 +299,6 @@
             if( returned==true)
             returned=passValidate();
             return returned; 
-
-            
         }
     </script>
 </body>
