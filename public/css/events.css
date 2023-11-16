@@ -783,7 +783,7 @@ font-family: 'EB Garamond', serif;
   width: 90%;
   height: auto;
   top: 30px;
-  background:  linear-gradient(45deg,  #4285F4 0%,rgba(66, 245, 189,0.4) 100%);
+  background:  black;
   color: white;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 20px;

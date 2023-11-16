@@ -46,16 +46,16 @@
         <!-- create an error message if the user made an error trying to create an account -->
         <?php
             if(isset($_GET['error'])) {
-            if($_GET['error']== "emptyEmail") {
-                echo '<p class = "err">Email does not exist! Please signup</p>';  
-            }
-            elseif ($_GET['error'] == "403") {
-                // code...
-                echo '<p class = "err"> Password does not match the account </p>';
-            }elseif ($_GET['error'] == "error") {
-                // code...
-                echo '<p class = "err"> Please login to continue </p>';
-            }
+                if($_GET['error']== "emptyEmail") {
+                    echo '<p class = "err">Email does not exist! Please signup</p>';  
+                }
+                elseif ($_GET['error'] == "403") {
+                    // code...
+                    echo '<p class = "err"> Password does not match the account </p>';
+                }elseif ($_GET['error'] == "error") {
+                    // code...
+                    echo '<p class = "err"> Please login to continue </p>';
+                }
             }
         ?>
         <h2 style="text-align: center; margin-bottom: 80px;">Login</h2>

@@ -2,7 +2,7 @@
     include_once('topnav.php');
     include('../helpers/DbHelpers.php');
     if (!isset($_SESSION['id'])) {
-        header('Location: ./login.php?error=error');
+        header('Location: ../events/index.php?error=error');
     }
     if (isset($_GET['error'])) {
         if($_GET['error']== "empty") {
