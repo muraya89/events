@@ -89,8 +89,8 @@
                         <label for="">Role</label><br>
                         <select name="role" id="role">
                             <option value="">Select role</option>
-                            <option value="Organizers">Event Organizer</option>
-                            <option value="Attendees">Attendee</option>
+                            <option value="1">Event Organizer</option>
+                            <option value="0">Attendee</option>
                         </select><br><br>
                         <label for="">New password</label><br>
                         <input type="password" name="newpass" id="newpass"><br><br>
