@@ -30,19 +30,23 @@
 </head>
 
 <div id="container">	
-            <?php
-                if(isset($_GET['error'])) {
-                    if($_GET['error']== "invalidemail") {
-                        echo '<p class = "err">Invalid Email!</p>';  
-                    }
-                    elseif ($_GET['error'] == "emptyName") {
-                        echo '<p class = "err"> Fill in this required field </p>';
-                    }elseif ($_GET['error'] == "validAmount") {
-                        echo '<p class = "err"> Please fill in a valid ticket purchasing amount </p>';
-                    }
-                }
-            ?>
+    <?php
+        if(isset($_GET['error'])) {
+            if($_GET['error']== "invalidemail") {
+                echo '<p class = "err">Invalid Email!</p>';  
+            }
+            elseif ($_GET['error'] == "emptyName") {
+                echo '<p class = "err"> Fill in this required field </p>';
+            }elseif ($_GET['error'] == "validAmount") {
+                echo '<p class = "err"> Please fill in a valid ticket purchasing amount </p>';
+            }
+        }
+    ?>
     <div class="product-details">
+        <button onclick="goBack()" class="goBack">
+            <i class="fa fa-arrow-left" aria-hidden="true" style="margin-right: 15px;"></i>
+            Go back
+        </button>
         <h1><?= $event['name']?></h1>
         <span class="hint-star star">
             <i class="fa fa-star" aria-hidden="true"></i>
