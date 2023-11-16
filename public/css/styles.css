@@ -269,6 +269,7 @@ input[type=number] {
   align-items: center;
   top: 0;
   left: 50%;
+  border: none;
   transform: translate(-50%, -50%);
 }
 .goBack{
@@ -284,4 +285,40 @@ input[type=number] {
   justify-content: center;
   align-items: center;
   border: none;
+}
+.supplierTable{  
+  margin: 10px 7px 100px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+table{
+  width: 100%;
+}
+th, td{
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+th{
+  background-color: #4285F4;
+  color: #f2f2f2;
+	height: 30px;
+}
+td{
+	height: 30px;
+}
+tr:nth-child(even) {
+  background-color: #eeeeee;
+}
+tr:hover{
+  background-color: #ddd;
+}
+td .action2{
+  padding-left: 30px;
+}
+.td{
+  display: flex;
+  width: 90px;
+}
+.td1{
+  display: flex;
+  width: 160px;
 }

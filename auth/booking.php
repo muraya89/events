@@ -11,8 +11,6 @@ class Book {
 
     public function book($postData) {
         if (isset($postData['booking_submit'])) {
-            // var_dump($postData);
-            // exit();
             if (!filter_var($postData['email'], FILTER_VALIDATE_EMAIL)) {
                 header("Location: ../Attendees/event.php?event=".$postData['event_id']."error=invalidemail&name=".$postData['name']);
                 exit();

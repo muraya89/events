@@ -124,6 +124,19 @@ class DbHelpers {
     }
   }
 
+  public function fetchBookings($userID) {
+    $result = mysqli_query($this->db, "SELECT bookings.*,events.*
+    FROM bookings
+    JOIN events ON bookings.event_id = events.id
+    WHERE bookings.user_id = '$userID'
+    ");
+    if ($result) {
+      return $result;
+    } else {
+      return 'table not found';
+    }
+  }
+
   public function errorFunction ($page, $errorMessage) {
     header("Location: ../$page?error=$errorMessage");
     exit();

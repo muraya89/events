@@ -94,7 +94,9 @@
 
     <div id="myModal" class="modal">
         <form action="../auth/booking.php" name="booking" onsubmit="return validateBooking(); " method="post" style="font-size:20px">
-            <button class="close" onclick="closeModal()" aria-label="Close"> x </button> 
+            <button class="close" onclick="closeModal()" aria-label="Close"> 
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </button> 
             <h2>Purchase a ticket</h2>
             <label for="name">Name</label><br>
             <input type="text" name="name" id="name"><br>
@@ -106,7 +108,7 @@
             <input type="hidden" name="user_id" value="<?=$user_id?>">
             <input type="hidden" name="available_tickets" value="<?=$event['available_tickets']?>">
             <input type="hidden" name="redirect_to" value="../Attendees/event.php?event=<?=$event['id']?>" />
-            <button class="submit" type="submit" name="booking_submit">submit</button>
+            <button class="submit" type="submit" name="booking_submit">Submit</button>
         </form>
     </div>
 </div>
