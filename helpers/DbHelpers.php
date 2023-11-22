@@ -141,6 +141,37 @@ class DbHelpers {
     header("Location: ../$page?error=$errorMessage");
     exit();
   }
+
+  public function sumRevenue(){
+    $result  = mysqli_query($this->db, "SELECT sum(total_amount) from bookings;");
+    if($result){
+      return $result;
+    }else{
+      return (object)[
+        "response" => $result,
+        "message" => "success"
+      ];
+    }
+  }
+
+  public function countUsers ($account_type) {
+    $result = mysqli_query($this->db, "SELECT COUNT(*) as count FROM users");
+    if ($result) {
+      return $result;
+    } else {
+      return 'table not found';
+    }
+  }
+  
+  public function ordering(){
+    $result = mysqli_query($this->db, "SELECT animals.breed,animals.type, sum(quantity)from orders,animals where orders.product_id=animals.id group by breed order by sum(quantity) desc limit 4  ");
+    // var_dump(mysqli_fetch_assoc($result));die();
+    if($result){
+      return $result;
+    }else{
+      return 'table not found';
+    }
+  }
 }
 
 // create the new objectDEL17713
